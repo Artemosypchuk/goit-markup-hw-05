@@ -5,12 +5,11 @@ body {
 }
 a{
     text-decoration: none;
-    color: #2E2F42;
-    font-weight: bold;
     cursor: pointer;
 }
 .logo{
     font-family: "Raleway", sans-serif;
+    color: #2E2F42;
 
 }
 /* Навігаційні посилання */
@@ -32,14 +31,14 @@ a{
 h1{
     font-weight: 700;
     font-size: 56px;
-    line-height: 2;
+    line-height: 1.2;
     text-align: center;
     letter-spacing: 0.02em;
 }
 h2{
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.5;
+    line-height: 1.2;
     text-align: center;
     letter-spacing: 0.02em;
     color: #2E2F42;
@@ -69,11 +68,14 @@ address a{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    color: #2E2F42;
 }
-address a:hover{
+address a:hover,
+address a:focus{
     color: #404BBF;
 }
-a span{
+
+.logo span{
     color: #4D5AE5;
 }
 .solution{
@@ -106,8 +108,11 @@ a span{
     background-color: #ffffff;
     margin: 20px 20px;
 }
+footer .logo{
+    color: #F4F4FD;
+}
 footer, footer a{
     background-color: #2E2F42;
-    color: white;
+    color: #F4F4FD;
 
 }
