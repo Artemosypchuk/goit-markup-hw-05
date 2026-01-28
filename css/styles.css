@@ -102,10 +102,20 @@ body {
   padding: 24px 0;
   display: block;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .nav-link:hover, .nav-link:focus { color: #404bbf; }
-
+.nav-link:active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+  margin-top: 20px;
+  position: absolute;
+}
 .contacts { margin-left: auto; }
 .contacts-list {
   display: flex;
@@ -125,12 +135,14 @@ body {
 
 /* Hero Section */
 .hero {
+  max-width: 1440px;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.png);
   padding: 188px 0;
   /* Для фонового зображення в майбутньому */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -158,9 +170,15 @@ body {
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  box-shadow: 0px 4px 4px 0px #00000026;
+
 }
 
-.hero-btn:hover, .hero-btn:focus { background-color: #404bbf; }
+.hero-btn:hover, .hero-btn:focus { 
+  background-color: #404bbf; 
+  box-shadow: 0px 4px 4px 0px #00000026;
+
+}
 
 /* Features */
 .features { padding: 120px 0; }
@@ -171,11 +189,14 @@ body {
   border:#8E8F99 1px solid;
   border-radius: 4px;
   margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon-antenna-1, .icon-astronaut-1, .icon-diagram-1, .icon-clock-1 {
   width: 64px;
   height: 64px;
-  margin: 24px auto 0 auto;
+
 }
 .features-list {
   display: flex;
@@ -261,12 +282,35 @@ body {
 .portfolio-item {
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
 }
+.bank-card-back {
+  width: 360px;
+  height: 0px;
+  background-color: #4D5AE5;
+  position: absolute;
+  color: #F4F4FD;
+  opacity: 0;
+  top: -300px;
+}
+.bank-card-back p{
+  padding: 40px 32px 0 32px;
+  font-weight: 400;          /* Regular */
+  font-size: 16px;           /* Size */
+  line-height: 24px;         /* Line height */
+  letter-spacing: 0.02em;    /* Letter spacing (2%) */
+}
+.portfolio-item:hover, .portfolio-item:focus {
+  box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229;
 
-.portfolio-card-content {
-  padding: 32px 16px;
-  border: 1px solid #e7e9fc;
-  border-top: none;
+}
+.portfolio-item:hover .bank-card-back, .portfolio-item:focus .bank-card-back {
+  height: 300px;
+  opacity: 1;
+  top: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-subtitle {
