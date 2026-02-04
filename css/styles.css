@@ -304,6 +304,8 @@ body {
   height: 100%;
   background-color: #4D5AE5;
   position: absolute;
+  top: 0;
+  left: 0;
   color: #F4F4FD;
   top: 300px;
   transform: translateY(300px);
