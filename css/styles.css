@@ -383,7 +383,7 @@ body {
 }
 .email-subscribe{
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -392,7 +392,7 @@ body {
 }
 .sub-input-wrap{
   display: flex;
-  gap: 16px;
+  column-gap: 24px;
  
 }
 
@@ -465,6 +465,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 .popup-wrapper.is-open {
   opacity: 1;
@@ -487,6 +489,9 @@ body {
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+}
+.icon-close{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .popup-close:hover, .popup-close:focus{
   background-color: rgba(64, 75, 191, 1);
@@ -521,13 +526,20 @@ body {
   left: 19px;
   transform: translateY(-50%);
   fill: #2E2F42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
+.popup-label{
+  color: #8e8f99
+}
 .popup-input{
   padding: 11px 10px 11px 38px;
   border: solid 1px rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
   outline: none;
+}
+.popup-input, .textarea,.custom-checkbox {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .popup-input:focus, .popup-input:focus + svg{
   border-color: #4D5AE5;
@@ -548,6 +560,7 @@ body {
   width: 360px;
   height: 120px;
   padding: 8px 16px;
+  border-radius: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.7;
@@ -583,6 +596,7 @@ body {
 .terms-link {
   color: #4D5AE5;
   cursor: pointer;
+  transition: text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .terms-link:hover, .terms-link:focus {
   color: #404BBF;
