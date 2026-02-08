@@ -363,6 +363,9 @@ body {
   gap: 120px;
   align-items: baseline;
 }
+.footer-content:nth-child(3){
+  margin-left: -40px;
+}
 .logo-studio-footer { color: #f4f4fd; }
 .footer-text {
   color: #f4f4fd;
@@ -370,6 +373,10 @@ body {
   letter-spacing: 0.02em;
   max-width: 264px;
   margin-top: 16px;
+}
+.subscribe{
+  margin-left: -40px;
+  offset: inherit;
 }
 .sub-form {
   color: #f4f4fd;
@@ -383,9 +390,11 @@ body {
   gap: 16px;
  
 }
+
 .sub-input{
   background-color: #2E2F42;
   border: solid 1px #fff;
+  max-width: 264px;
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 400;
@@ -581,4 +590,8 @@ body {
   border: none;
   margin: 24px auto;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.popup-submit:hover, .popup-submit:focus{
+  background-color: #404BBF;
 }
