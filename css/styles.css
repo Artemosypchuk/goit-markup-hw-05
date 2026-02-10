@@ -387,6 +387,7 @@ body {
 
 .social-footer {
   justify-content: flex-start;
+  column-gap: 16px;
 }
 
 .social.social-footer .social-list {
@@ -557,7 +558,9 @@ body {
 }
 
 .icon-close {
+  fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .popup-close:hover .icon-close,
 .popup-close:focus .icon-close {
